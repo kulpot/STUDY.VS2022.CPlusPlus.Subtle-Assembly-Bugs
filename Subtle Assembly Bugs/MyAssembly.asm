@@ -23,6 +23,8 @@ again:
 	add eax, ecx
 	inc ecx
 	cmp ecx, 10000	; increment to 10000
+	;cmp ecx, 3
+	;inc ecx
 	jle again		; jump lessthan/equalto
 
 
