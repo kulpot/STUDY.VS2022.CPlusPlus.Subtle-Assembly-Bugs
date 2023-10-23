@@ -10,6 +10,15 @@ doit proc
 
 	; this is a comment i can type whatever i like after a semicolon and assembler will ignore it
 	
+	; ---------- Subtle Assembly Bugs --------------------
+
+
+
+
+
+
+	ret
+
 	; ----------- Assembly Adding 1 to 100 -----------------
 
 	; eax will store the accumalation (sum)
@@ -29,18 +38,18 @@ doit proc
 ;
 ;	ret				; result 6  will ret bec -> not jle -> cmp ecx, 3
 
-	; ----- add 1 to 100 --------
-
-	move eax, 0
-	move ecx, 1
-again:
-	add eax, ecx
-	inc ecx
-	cmp ecx, 100	; increment to 100
-	jle again		; jump lessthan/equalto
-
-
-	ret			
+;	; ----- add 1 to 100 --------
+;
+;	move eax, 0
+;	move ecx, 1
+;again:
+;	add eax, ecx
+;	inc ecx
+;	cmp ecx, 100	; increment to 100
+;	jle again		; jump lessthan/equalto
+;
+;
+;	ret			
 
 	; ----------- Assembly Multiple Branches --------------
 	; combining conditional/unconditional branching statements
