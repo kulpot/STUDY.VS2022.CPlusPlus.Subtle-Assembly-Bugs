@@ -11,13 +11,22 @@ doit proc
 	; this is a comment i can type whatever i like after a semicolon and assembler will ignore it
 	
 	; ---------- Subtle Assembly Bugs --------------------
+	
+	; eax will store the accumalation (sum)
+	; ecx will store the count
+
+	; ----- add 1 to 10000 --------
+
+	move eax, 0
+	move ecx, 1
+again:
+	add eax, ecx
+	inc ecx
+	cmp ecx, 10000	; increment to 10000
+	jle again		; jump lessthan/equalto
 
 
-
-
-
-
-	ret
+	ret			
 
 	; ----------- Assembly Adding 1 to 100 -----------------
 
