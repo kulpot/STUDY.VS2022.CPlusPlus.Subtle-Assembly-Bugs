@@ -21,11 +21,12 @@ doit proc
 	move ecx, 1
 again:
 	add eax, ecx
-;again:				 ;
+;again:				 ; error infinite loop with no change 
 	inc ecx
 	cmp ecx, 10000	; increment to 10000
 	;cmp ecx, 3
 	;inc ecx		; error cmp must be above the jle(conditional branch)
+;again:				 ; error infinite loop of "jle again"
 	jle again		; jump lessthan/equalto
 
 
